@@ -24,4 +24,3 @@ assertEqual(head(["Red", "Green", "Yellow"]), "Blue");
 assertEqual(head([]), true);
 assertEqual(head([true]), true);
 assertEqual(head('a'), 0);
-
