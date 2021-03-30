@@ -17,4 +17,4 @@ Takes in an array object and returns the first value (head) in the array. Return
 ```javascript
 tail(...arr, n)
 ```
-Takes in an array object and returns n number of values following the first array position (tail).
+Takes in an array object and returns n number of values following the first array position (tail).4
