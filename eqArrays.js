@@ -9,19 +9,22 @@ const assertEqual = function(actual, expected) {
 
 const eqArrays = function(arr1, arr2) {
 
-  let state = true;
+  let equal = true;
 
+  //Check to see if the length matches first
   if (arr1.length !== arr2.length) {
-    state = false;
+    equal = false;
   }
 
+  //Then iterate the list and compare each index
   for (let i in arr1) {
     if (arr1[i] !== arr2[i]) {
-      state = false;
+      equal = false;
     }
   }
 
-  return state;
+  //Return equality
+  return equal;
 };
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
