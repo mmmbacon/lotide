@@ -9,7 +9,7 @@ const assertArraysEqual = function(actual, expected) {
 
   //Then iterate the list and compare each index
   for (let i in actual) {
-    if (actual[i] !== expected[i]) {
+    if (actual[i] != expected[i]) {
       equal = false;
     }
   }
@@ -24,3 +24,5 @@ const assertArraysEqual = function(actual, expected) {
 
 //Test case
 assertArraysEqual([1,2],[1,2,3]);
+assertArraysEqual(["1","2","3"],[1,2,3]);
+assertArraysEqual([1,2,3],[1,2,3]);
