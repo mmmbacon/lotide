@@ -72,18 +72,21 @@ const eqObjects = function(obj1, obj2) {
 
 };
 
-// Test Code - Simple
-const ab = { a: "1", b: "2" };
-const ba = { a: "1", b: "2" };
-//const ba = { b: "2", a: "1" };
-const abc = { a: "1", b: "2", c: "3" };
-assertEqual(eqObjects(ab, abc), false);
-assertEqual(eqObjects(ab, ba), true);
+const assertObjectsEqual = function(actual, expected) {
 
-// Test Code - Arrays
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, dc), true);
-assertEqual(eqObjects(cd, cd2), false);
-assertEqual(eqObjects({a:'1', b:'2'}, {a:'1', b:'2'}), true);
+  const inspect = require('util').inspect;
+
+  //Then check if they are equal and log the assertion
+  if (eqObjects(actual, expected)) {
+    console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+  }
+
+};
+
+assertObjectsEqual({"a" : 0},{});
+assertObjectsEqual({"a" : 0},{"a" : 0});
+assertObjectsEqual({"a" : 0,"b" : 0}, {"a" : 0});
+assertObjectsEqual({},{});
+assertObjectsEqual({a:0, b:0},{a:0, b:0});
