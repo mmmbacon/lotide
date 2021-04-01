@@ -1,15 +1,17 @@
-const words = ["ground", "control", "to", "major", "tom"];
+const takeUntil = (array, callback) => {
+  const result = [];
 
-const map = (array, callback) => {
-
-  const results = [];
-
-  for (let item of array) {
-    results.push(callback(item));
+  for (const item of array) {
+    
+    if (callback(item)) {
+      break;
+    }
+    result.push(item);
   }
-  return results;
+  return result;
 };
 
+//Testing
 const assertArraysEqual = function(actual, expected) {
 
   let equal = true;
@@ -34,7 +36,12 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-const results1 = map(words, word => word[0]);
+const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+const results1 = takeUntil(data1, x => x < 0);
+
+const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
+const results2 = takeUntil(data2, x => x === ',');
 
 //Test case
-assertArraysEqual(results1,['g','c','t','m','t']);
+assertArraysEqual(results1,[1, 2, 5, 7, 2]);
+assertArraysEqual(results2,["I've", "been", "to", "Hollywood"]);
