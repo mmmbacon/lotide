@@ -1,9 +1,6 @@
 const assert = require('chai').assert;
 const map = require('../map');
 
-//Test case
-//assertArraysEqual(map(words, word => word[0]),);
-
 describe('#head', ()=>{
 
   it(`returns ['g','c','t','m','t'] for ["ground", "control", "to", "major", "tom"]`, ()=>{
