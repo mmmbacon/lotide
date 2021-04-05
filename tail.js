@@ -13,3 +13,5 @@ const tail = function(arr, n) {
     return undefined;
   }
 };
+
+module.exports = tail;
