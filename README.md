@@ -34,9 +34,12 @@ The following functions are currently implemented:
 
  * `map([array])`: Takes in an array object and a callback function. Applies the callback function to each item in the array and returns a new array.
 
- * `without`: 
- * `takeUntil`:
+ * `without([array],[array])`: Takes in two array objects. Removes items from array 1 where it matches any item in array 2.
+
+ * `takeUntil`: Takes in an array and a callback function. Will iterate the array and build a new array from array items as long as the callback returns true.
+
  * `flatten`:
+ 
  * `letterPositions`:
  * `findKeyByValue`:
  * `findKey`:
