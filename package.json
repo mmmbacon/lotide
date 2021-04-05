@@ -1,8 +1,8 @@
 {
   "name": "lotide",
   "version": "1.0.0",
-  "description": "## About This repository is a library of functions that mimick the lodash javascript library. This library was created as a course activity for the Lighthouse Labs WEb Developer Code bootcamp.",
-  "main": "assertArraysEqual.js",
+  "description": "## About This repository is a library of functions that mimick the lodash javascript library. This library was created as a course activity for the Lighthouse Labs Web Developer Code bootcamp.",
+  "main": "index.js",
   "directories": {
     "test": "tests"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/mmmbacon/lotide.git"
   },
-  "author": "",
+  "author": "Brandon Macdonald <bmacdonald1986@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mmmbacon/lotide/issues"
