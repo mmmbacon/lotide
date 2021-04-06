@@ -1,18 +1,16 @@
 const head = function(arr) {
 
-  if (!arr) {
-    return undefined;
+  if (Array.isArray(arr)) {
+    if (arr.length < 1) {
+      arr = true;
+    } else {
+      arr = arr[0];
+    }
+  } else {
+    arr = 0;
   }
 
-  if (!Array.isArray(arr)) {
-    return 0;
-  }
-  
-  if (arr.length < 1) {
-    return true;
-  }
-
-  return arr[0];
+  return arr;
 
 };
 
