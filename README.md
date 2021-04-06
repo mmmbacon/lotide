@@ -38,9 +38,10 @@ The following functions are currently implemented:
 
  * `takeUntil`: Takes in an array and a callback function. Will iterate the array and build a new array from array items as long as the callback returns true.
 
- * `flatten`:
- 
- * `letterPositions`:
+ * `flatten`: Takes in an array of items and returns a flattened array. Can include nested arrays.
+
+ * `letterPositions`: Takes in a string and returns an object with a key for each unique letter in the string, and an occurance count for each.
+
  * `findKeyByValue`:
  * `findKey`:
  * `countOnly`:
